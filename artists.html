@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Store :: Javascript 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/tooltipster.bundle.css">    
+    <link rel="stylesheet" href="./css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="container main">
+        <!-- main container -->
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <a class="navbar-brand" href="#">
+                <img id="storeLogo" src="./images/music_shop.png" alt="Music Store Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    Meni
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./artists.html">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./genre.html">Genre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./editors_pick.html">Editor's Pick</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Newsletter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div>
+                    <div>
+                        <a href="#">
+                            Cart (<span id="numOfItems">0</span>)
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">Login / Register</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="artists row">
+            <div class="artist col-md-4" data-tooltip-content="#genesis"> <!--klasa za tooltip-->
+                <div class="artist-photo"> <!--Genesis-->
+                    <picture>
+                        <source 
+                        srcset="./images/genesis800x600.jpg"
+                        media="(min-width:601px">
+                        <source
+                        srcset="./images/genesis480-360.jpg"
+                        media="(max-width:600px)">
+                        <img class="img-fluid" src="./images/genesis800x600.jpg" alt="Photo of Genesis">
+                    </picture>
+                </div>
+                <div class="artist-title">
+                    <h3>Genesis</h3>
+                </div>
+
+                
+            </div>
+
+            <div class="artist col-md-4" data-tooltip-content="#pink-floyd"> <!--klasa za tooltip-->
+                <div class="artist-photo">
+                    <!--Pink Floyd-->
+                    <picture>
+                        <source srcset="./images/pink-floyd800x600.jpg" media="(min-width:601px">
+                        <source srcset="./images/pink-floyd480x360.jpg" media="(max-width:600px)">
+                        <img class="img-fluid" src="./images/pink-floyd800x600.jpg" alt="Photo of Pink Floyd">
+                    </picture>
+                </div>
+                <div class="artist-title">
+                    <h3>Pink Floyd</h3>
+                </div>
+            </div>
+
+            <div class="artist col-md-4" data-tooltip-content="#toto"> <!--klasa za tooltip-->
+                <div class="artist-photo">
+                    <!--Toto-->
+                    <picture>
+                        <source srcset="./images/toto800x600.jpg" media="(min-width:601px">
+                        <source srcset="./images/toto480x360.jpg" media="(max-width:600px)">
+                        <img class="img-fluid" src="./images/toto800x600.jpg" alt="Photo of Toto">
+                    </picture>
+                </div>
+                <div class="artist-title">
+                    <h3>Toto</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end main container -->
+
+    <div style="display: none;"> <!--tooltip text-->
+        <div id="genesis" style="max-width: 600px;">
+            <h2>Genesis</h2>
+            <p>Genesis are an English rock band formed at Charterhouse School, Godalming, Surrey, in 1967. The most commercially
+            successful and longest-lasting line-up consisted of keyboardist Tony Banks, bassist/guitarist Mike Rutherford and
+            drummer/singer Phil Collins. Significant former members were original lead singer Peter Gabriel, and guitarists Anthony
+            Phillips and Steve Hackett. The band moved from folk music to progressive rock in the 1970s, before moving towards pop
+            at the end of the decade. They have sold 21.5 million copies of their albums in the United States, with worldwide sales
+            of between 100 million and 150 million.</p>
+        </div>
+
+        <div id="pink-floyd" style="max-width: 600px;">
+            <h2>Pink Floyd</h2>
+            <p>Pink Floyd were an English rock band formed in London in 1965. Gaining a following as a psychedelic rock group, they
+            were distinguished for their extended compositions, sonic experimentation, philosophical lyrics and elaborate live
+            shows, and became a leading band of the progressive rock genre. They are one of the most commercially successful and
+            influential bands in popular music history.
+            
+            Pink Floyd were founded by students Syd Barrett (guitar, lead vocals), Nick Mason (drums), Roger Waters (bass guitar,
+            vocals), and Richard Wright (keyboards, vocals). Under Barrett's leadership, they released two charting singles and a
+            successful debut album, The Piper at the Gates of Dawn (1967). Guitarist and vocalist David Gilmour joined in December
+            1967; Barrett left in April 1968 due to deteriorating mental health. Waters became the primary lyricist and thematic
+            leader, devising the concepts behind the albums The Dark Side of the Moon (1973), Wish You Were Here (1975), Animals
+            (1977), The Wall (1979), and The Final Cut (1983). The band also composed several film scores.</p>
+        </div>
+
+        <div id="toto" style="max-width: 600px;">
+            <h2>Toto</h2>
+            <p>Toto was an American rock band formed in 1977 in Los Angeles. The band's most recent lineup consisted of Joseph Williams
+            (lead vocals), David Paich (keyboards, vocals), Steve Porcaro (keyboards), Steve Lukather (guitars, vocals), plus
+            touring members Lenny Castro (percussion), Warren Ham (saxophone), Shem von Schroeck (bass) and Shannon Forrest (drums).
+            Toto is known for a musical style that combines elements of pop, rock, soul, funk, progressive rock, hard rock, R&B,
+            blues, and jazz.
+            
+            Paich and Jeff Porcaro had played together as session musicians on several albums and decided to form a band. David
+            Hungate, Lukather, Steve Porcaro, and Bobby Kimball were recruited before the first album release. The band enjoyed
+            great commercial success in the late 1970s and 1980s, beginning with the band's eponymous debut released in 1978. With
+            the release of the critically acclaimed and commercially successful Toto IV (1982), Toto became one of the best-selling
+            music groups of their era.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/tooltipster.bundle.js"></script>
+    <script>
+        $(".artist").tooltipster({
+            theme: 'tooltipster-borderless'
+        });
+    </script>
+</body>
+
+</html>
